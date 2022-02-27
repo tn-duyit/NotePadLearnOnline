@@ -1,0 +1,43 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "duycon365",
+    "password": "duycon365"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "duycon365",
+    "password": "duycon365"
+}
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjE0YjNiM2E1ZjI0YWYwNTM2ZGMyZjEiLCJpYXQiOjE2NDU1MjM4OTF9.hWQdQH0uCJ6O867qfHxn2kUMdWpWqv9wPPJ7Sro6GXY
+
+{
+    "title":"React",
+    "description": "React",
+    "url": "react.com",
+    "status": "LEARNING"
+}
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjE0YjNiM2E1ZjI0YWYwNTM2ZGMyZjEiLCJpYXQiOjE2NDU1MjM4OTF9.hWQdQH0uCJ6O867qfHxn2kUMdWpWqv9wPPJ7Sro6GXY
+###
+PUT http://localhost:5000/api/posts/6214b6fbea0eb8f036e9f25f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjE0YjNiM2E1ZjI0YWYwNTM2ZGMyZjEiLCJpYXQiOjE2NDU1MjM4OTF9.hWQdQH0uCJ6O867qfHxn2kUMdWpWqv9wPPJ7Sro6GXY
+
+{
+    "title": "Vue",
+    "description": "Vue",
+    "url": "https://vue.org",
+    "status": "LEARNING"
+}
+###
+DELETE  http://localhost:5000/api/posts/6214b6fbea0eb8f036e9f25f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjE0YjNiM2E1ZjI0YWYwNTM2ZGMyZjEiLCJpYXQiOjE2NDU1MjM4OTF9.hWQdQH0uCJ6O867qfHxn2kUMdWpWqv9wPPJ7Sro6GXY
