@@ -18,7 +18,7 @@ const AddPostModal = () => {
 		title: '',
 		description: '',
 		url: '',
-		status: 'HỌC'
+		status: 'TO LEARN'
 	})
 
 	const { title, description, url } = newPost
@@ -38,21 +38,21 @@ const AddPostModal = () => {
 	}
 
 	const resetAddPostData = () => {
-		setNewPost({ title: '', description: '', url: '', status: 'HỌC' })
+		setNewPost({ title: '', description: '', url: '', status: 'TO LEARN' })
 		setShowAddPostModal(false)
 	}
 
 	return (
 		<Modal show={showAddPostModal} onHide={closeDialog}>
 			<Modal.Header closeButton>
-				<Modal.Title>Bạn cần học gì?</Modal.Title>
+				<Modal.Title>What do you want to learn?</Modal.Title>
 			</Modal.Header>
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Nội dung'
+							placeholder='Title'
 							name='title'
 							required
 							aria-describedby='title-help'
@@ -60,14 +60,14 @@ const AddPostModal = () => {
 							onChange={onChangeNewPostForm}
 						/>
 						<Form.Text id='title-help' muted>
-							Yêu cầu
+							Required
 						</Form.Text>
 					</Form.Group>
 					<Form.Group>
 						<Form.Control
 							as='textarea'
 							rows={3}
-							placeholder='Mô tả'
+							placeholder='Description'
 							name='description'
 							value={description}
 							onChange={onChangeNewPostForm}
@@ -76,7 +76,7 @@ const AddPostModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Đường dẫn mô tả'
+							placeholder='Youtube Tutorial URL'
 							name='url'
 							value={url}
 							onChange={onChangeNewPostForm}
@@ -85,10 +85,10 @@ const AddPostModal = () => {
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant='secondary' onClick={closeDialog}>
-						Hủy
+						Cancel
 					</Button>
 					<Button variant='primary' type='submit'>
-						Tạo
+						LearnIt!
 					</Button>
 				</Modal.Footer>
 			</Form>

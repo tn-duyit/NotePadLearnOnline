@@ -51,30 +51,30 @@ const RegisterForm = () => {
 			<Form className='my-4' onSubmit={register}>
 				<AlertMessage info={alert} />
 
-				<Form.Group>
+				<Form.Group className='loginpass'>
 					<Form.Control
 						type='text'
-						placeholder='Tài khoản'
+						placeholder='Username'
 						name='username'
 						required
 						value={username}
 						onChange={onChangeRegisterForm}
 					/>
 				</Form.Group>
-				<Form.Group>
+				<Form.Group className='loginpass'>
 					<Form.Control
 						type='password'
-						placeholder='Mật khẩu'
+						placeholder='Password'
 						name='password'
 						required
 						value={password}
 						onChange={onChangeRegisterForm}
 					/>
 				</Form.Group>
-				<Form.Group>
+				<Form.Group className='loginpass'>
 					<Form.Control
 						type='password'
-						placeholder='Xác nhận mật khẩu'
+						placeholder='Confirm Password'
 						name='confirmPassword'
 						required
 						value={confirmPassword}
@@ -82,14 +82,14 @@ const RegisterForm = () => {
 					/>
 				</Form.Group>
 				<Button variant='success' type='submit'>
-					Đăng kí
+					Register
 				</Button>
 			</Form>
 			<p>
-				Đã có tài khoản? 
+				Already have an account?
 				<Link to='/login'>
-					<Button variant='info' size='sm' className='ml-2'>
-						Đăng nhập
+					<Button variant='info' size='sm' className='ml-2' className='button-me'>
+						Login
 					</Button>
 				</Link>
 			</p>

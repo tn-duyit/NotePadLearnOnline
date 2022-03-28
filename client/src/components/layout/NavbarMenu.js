@@ -39,20 +39,20 @@ const NavbarMenu = () => {
 						to='/dashboard'
 						as={Link}
 					>
-						Trang chủ
+						Home
 					</Nav.Link>
 					<Nav.Link
 						className='font-weight-bolder text-white'
 						to='/about'
 						as={Link}
 					>
-						Thông tin
+						About
 					</Nav.Link>
 				</Nav>	
 			</Navbar.Collapse>
 			<Nav>
 					<Nav.Link className='font-weight-bolder text-white' disabled>
-						Chào mừng: {username}
+						Hi: {username}
 					</Nav.Link>
 					<Button
 						variant='secondary'
@@ -66,7 +66,7 @@ const NavbarMenu = () => {
 							height='32'
 							className='mr-2'
 						/>
-						Thoát
+						Log out
 					</Button>
 				</Nav>
 		</Navbar>

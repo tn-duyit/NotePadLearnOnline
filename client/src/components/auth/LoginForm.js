@@ -39,37 +39,37 @@ const LoginForm = () => {
 	return (
 		<>
 			<Form className='my-4' onSubmit={login}>
-			<AlertMessage info={alert} />
+				<AlertMessage info={alert} />
 
-				<Form.Group>
+				<Form.Group className='loginuser'>
 					<Form.Control
 						type='text'
-						placeholder='Tài khoản'
+						placeholder='Username'
 						name='username'
 						required
 						value={username}
 						onChange={onChangeLoginForm}
 					/>
 				</Form.Group>
-				<Form.Group>
+				<Form.Group className='loginpass'>
 					<Form.Control
 						type='password'
-						placeholder='Mật khẩu'
+						placeholder='Password'
 						name='password'
 						required
 						value={password}
 						onChange={onChangeLoginForm}
 					/>
 				</Form.Group>
-				<Button variant='success' type='submit'>
-					Đăng nhập
+				<Button variant='success' type='submit' className="button-me">
+					Login
 				</Button>
 			</Form>
 			<p>
-				Đăng kí ngay nếu không có tài khoản?
+				Don't have an account?
 				<Link to='/register'>
-					<Button variant='info' size='sm' className='ml-2'>
-						Đăng kí
+					<Button variant='info' size='sm' className='ml-2' className="button-me">
+						Register
 					</Button>
 				</Link>
 			</p>

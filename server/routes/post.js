@@ -36,13 +36,13 @@ router.post('/', verifyToken, async (req, res) => {
 			title,
 			description,
 			url: url.startsWith('https://') ? url : `https://${url}`,
-			status: status || 'HỌC',
+			status: status || 'TO LEARN',
 			user: req.userId
 		})
 
 		await newPost.save()
 
-		res.json({ success: true, message: 'Thêm thành công!', post: newPost })
+		res.json({ success: true, message: 'Happy learning!', post: newPost })
 	} catch (error) {
 		console.log(error)
 		res.status(500).json({ success: false, message: 'Internal server error' })
@@ -66,7 +66,7 @@ router.put('/:id', verifyToken, async (req, res) => {
 			title,
 			description: description || '',
 			url: (url.startsWith('https://') ? url : `https://${url}`) || '',
-			status: status || 'HỌC'
+			status: status || 'TO LEARN'
 		}
 
 		const postUpdateCondition = { _id: req.params.id, user: req.userId }
@@ -86,7 +86,7 @@ router.put('/:id', verifyToken, async (req, res) => {
 
 		res.json({
 			success: true,
-			message: 'Sửa thành công!',
+			message: 'Excellent progress!',
 			post: updatedPost
 		})
 	} catch (error) {

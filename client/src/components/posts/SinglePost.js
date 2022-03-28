@@ -8,9 +8,9 @@ const SinglePost = ({ post: { _id, status, title, description, url } }) => (
 	<Card
 		className='shadow'
 		border={
-			status === 'ĐÃ HỌC'
+			status === 'LEARNED'
 				? 'success'
-				: status === 'ĐANG HỌC'
+				: status === 'LEARNING'
 				? 'warning'
 				: 'danger'
 		}
@@ -23,9 +23,9 @@ const SinglePost = ({ post: { _id, status, title, description, url } }) => (
 						<Badge
 							pill
 							variant={
-								status === 'ĐÃ HỌC'
+								status === 'LEARNED'
 									? 'success'
-									: status === 'ĐANG HỌC'
+									: status === 'LEARNING'
 									? 'warning'
 									: 'danger'
 							}

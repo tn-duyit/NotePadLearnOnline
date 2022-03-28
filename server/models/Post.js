@@ -14,7 +14,7 @@ const PostSchema = new Schema({
     },
     status:{
         type: String, 
-        enum: ['HỌC','ĐANG HỌC','ĐÃ HỌC']
+        enum: ['TO LEARN','LEARNING','LEARNED']
     },
     user:{
         type: Schema.Types.ObjectId,

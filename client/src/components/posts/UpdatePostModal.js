@@ -44,14 +44,14 @@ const UpdatePostModal = () => {
 	return (
 		<Modal show={showUpdatePostModal} onHide={closeDialog}>
 			<Modal.Header closeButton>
-				<Modal.Title>Sửa?</Modal.Title>
+				<Modal.Title>Making progress?</Modal.Title>
 			</Modal.Header>
 			<Form onSubmit={onSubmit}>
 				<Modal.Body>
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Nội dung'
+							placeholder='Title'
 							name='title'
 							required
 							aria-describedby='title-help'
@@ -59,14 +59,14 @@ const UpdatePostModal = () => {
 							onChange={onChangeUpdatedPostForm}
 						/>
 						<Form.Text id='title-help' muted>
-							Yêu cầu
+							Required
 						</Form.Text>
 					</Form.Group>
 					<Form.Group>
 						<Form.Control
 							as='textarea'
 							rows={3}
-							placeholder='Mô tả'
+							placeholder='Description'
 							name='description'
 							value={description}
 							onChange={onChangeUpdatedPostForm}
@@ -75,7 +75,7 @@ const UpdatePostModal = () => {
 					<Form.Group>
 						<Form.Control
 							type='text'
-							placeholder='Đường dẫn mô tả'
+							placeholder='Youtube Tutorial URL'
 							name='url'
 							value={url}
 							onChange={onChangeUpdatedPostForm}
@@ -88,18 +88,18 @@ const UpdatePostModal = () => {
 							name='status'
 							onChange={onChangeUpdatedPostForm}
 						>
-							<option value='HỌC'>HỌC</option>
-							<option value='ĐANG HỌC'>ĐANG HỌC</option>
-							<option value='ĐÃ HỌC'>ĐÃ HỌC</option>
+							<option value='TO LEARN'>TO LEARN</option>
+							<option value='LEARNING'>LEARNING</option>
+							<option value='LEARNED'>LEARNED</option>
 						</Form.Control>
 					</Form.Group>
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant='secondary' onClick={closeDialog}>
-						Hủy
+						Cancel
 					</Button>
 					<Button variant='primary' type='submit'>
-						Sửa!
+						LearnIt!
 					</Button>
 				</Modal.Footer>
 			</Form>

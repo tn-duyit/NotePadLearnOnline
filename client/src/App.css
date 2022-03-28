@@ -110,3 +110,17 @@ button.post-button.btn:active {
 .post-title {
 	margin-bottom: 0.5rem;
 }
+.login-form{
+	margin: 30px;
+}
+.loginuser{
+	margin-bottom: 10px;
+}
+.loginpass{
+	margin-bottom: 10px;
+}
+.button-me{
+	color: black;
+	font-weight: 500;
+	margin-left: 10px;
+}
