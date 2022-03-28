@@ -44,7 +44,7 @@ const LoginForm = () => {
 				<Form.Group className='loginuser'>
 					<Form.Control
 						type='text'
-						placeholder='Username'
+						placeholder='UserName'
 						name='username'
 						required
 						value={username}
