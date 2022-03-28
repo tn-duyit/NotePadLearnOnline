@@ -45,17 +45,17 @@ const Dashboard = () => {
 		body = (
 			<>
 				<Card className='text-center mx-5 my-5'>
-					<Card.Header as='h1'>Xin Chào {username}</Card.Header>
+					<Card.Header as='h1'>Hi {username}</Card.Header>
 					<Card.Body>
-						<Card.Title>Chào mừng đến với NotePad Học Tập Trực Tuyến</Card.Title>
+						<Card.Title>Welcome to LearnIt</Card.Title>
 						<Card.Text>
-							Bấm để tạo môn học đầu tiên
+							Click the button below to track your first skill to learn
 						</Card.Text>
 						<Button
 							variant='primary'
 							onClick={setShowAddPostModal.bind(this, true)}
 						>
-							Bắt đầu!
+							LearnIt!
 						</Button>
 					</Card.Body>
 				</Card>
@@ -75,7 +75,7 @@ const Dashboard = () => {
 				{/* Open Add Post Modal */}
 				<OverlayTrigger
 					placement='left'
-					overlay={<Tooltip>Thêm</Tooltip>}
+					overlay={<Tooltip>Add a new thing to learn</Tooltip>}
 				>
 					<Button
 						className='btn-floating'
